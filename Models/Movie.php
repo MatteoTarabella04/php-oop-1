@@ -13,4 +13,9 @@ class Movie
       $this->description = $description;
       $this->genre = $genre;
    }
+
+   public function getGenre()
+   {
+      return $this->genre;
+   }
 }
