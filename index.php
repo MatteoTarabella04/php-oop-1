@@ -40,12 +40,16 @@ include __DIR__ . "./db.php";
             <ul>
                <?php foreach ($movies as $movie): ?>
                   <li>
-                     <?= $movie->name ?>
+                     <b>
+                        <?= $movie->name ?>
+                     </b>
                      <ul>
                         <li>
+                           <b>Description:</b>
                            <?= $movie->description ?>
                         </li>
                         <li>
+                           <b>Genre:</b>
                            <?= $movie->genre->name ?>
                         </li>
                      </ul>
