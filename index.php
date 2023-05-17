@@ -30,34 +30,40 @@ include __DIR__ . "/db.php";
          </h1>
       </div>
 
-      <div class="card m-auto w-50">
-         <div class="card-header">
-            <h2>
-               Your Movies
-            </h2>
-         </div>
-         <div class="card-body">
-            <ul>
-               <?php foreach ($movies as $movie): ?>
-                  <li>
-                     <b>
+      <div class="row row-cols-2">
+         <?php foreach ($movies as $movie): ?>
+            <div class="col mb-4">
+               <div class="card m-auto">
+                  <div class="card-header">
+                     <h2>
                         <?= $movie->name ?>
-                     </b>
+                     </h2>
+                  </div>
+                  <div class="card-body">
                      <ul>
-                        <li>
-                           <b>Description:</b>
-                           <?= $movie->description ?>
-                        </li>
-                        <li>
-                           <b>Genre:</b>
-                           <?= $movie->genre->name ?>
-                        </li>
-                     </ul>
-                  </li>
-               <?php endforeach ?>
-            </ul>
 
-         </div>
+                        <li>
+                           <b>
+                              Info:
+                           </b>
+                           <ul>
+                              <li>
+                                 <b>Description:</b>
+                                 <?= $movie->description ?>
+                              </li>
+                              <li>
+                                 <b>Genre:</b>
+                                 <?= $movie->genre->name ?>
+                              </li>
+                           </ul>
+                        </li>
+
+                     </ul>
+
+                  </div>
+               </div>
+            </div>
+         <?php endforeach ?>
       </div>
    </div>
 
