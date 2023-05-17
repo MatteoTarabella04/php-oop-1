@@ -39,9 +39,9 @@ include __DIR__ . "/db.php";
                         <?= $movie->name ?>
                      </h2>
                   </div>
+                  <img src='<?= $movie->poster ?>' alt='' class="img-fluid">
                   <div class="card-body">
                      <ul>
-
                         <li>
                            <b>
                               Info:
